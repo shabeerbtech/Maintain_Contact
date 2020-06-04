@@ -1,0 +1,31 @@
+<mvc:View controllerName="RC.NEWAR.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Maintain Contact Address" showFooter="true" showHeader="true" titleAlignment="Center">
+					<content>
+						<f:SimpleForm id="MaintainContactForm" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" class="editableForm">
+							<f:content>
+								<core:Title text="Create Contact Person" level="H3" titleStyle="Auto"/>
+								<Label text="Customer" required="true" showSuggestion="true" showTableSuggestionValueHelp="false" showValueHelp="true"
+									valueHelpRequest="handleValueHelp"/>
+								<Input value="{SelectedCustomer}" maxLength="5" required="true" showValueHelp="true"/>
+								<Label text="Contact Person" required="true"/>
+								<Input value="{SelectedCustomer}" maxLength="5" required="true"/>
+							</f:content> 
+						</f:SimpleForm>
+					</content>
+					<footer>
+						<Toolbar>
+							<ToolbarSpacer/>
+							<Button text="Create" icon="sap-icon://create" type="Emphasized" press="onCreate" enabled="true"/>
+							<Button text="Change" icon="sap-icon://request" type="Emphasized" press="onCreate" enabled="true"/>
+							<ToolbarSpacer/>
+						</Toolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

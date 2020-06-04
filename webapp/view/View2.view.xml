@@ -1,0 +1,82 @@
+<mvc:View controllerName="RC.NEWAR.controller.View2" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Maintain Contact Address">
+					<content>
+						<f:SimpleForm id="MaintainContactForm" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4"
+							labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+							singleContainerFullSize="true">
+							<f:content>
+								<core:Title text="Enter Contact Details" level="H3"/>
+								<Label text="Customer"/>
+								<Input value="{SelectedCustomer}" maxLength="5" enabled="false"/>
+								<Label text="Contact Person"/>
+								<Input value="{SelectedCustomer}" maxLength="5" enabled="false"/>
+							</f:content>
+						</f:SimpleForm>
+						<HBox>
+							<HBox>
+								<f:SimpleForm id="OtherDatad" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+									adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+									singleContainerFullSize="false" ariaLabelledBy="Title1">
+									<f:content>
+										<Toolbar ariaLabelledBy="Title1">
+											<Title id="Title1" text="Basic Data"/>
+										</Toolbar>
+										<Label text="ZIP Code" width="100px" />
+										<Input value="{ZIPCode}">
+											<layoutData>
+												<l:GridData span="XL2 L2 M2 S1"/>
+											</layoutData>
+										</Input>
+										<Toolbar ariaLabelledBy="Title2" height="1px"/>
+										<Label text="Address" width="100px" />
+										<Input value="{Twitter}" maxLength="100"/>
+										<Label/>
+										<Input value="{Twitter}" maxLength="100"/>
+										<Label/>
+										<Input value="{Twitter}" maxLength="100"/>
+									</f:content>
+								</f:SimpleForm>
+							</HBox>
+							<HBox>
+								<f:SimpleForm id="OtherData" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+									adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+									singleContainerFullSize="false" ariaLabelledBy="Title1">
+									<f:content>
+										<Toolbar ariaLabelledBy="Title3">
+											<Title id="Title3" text="Department Data"/>
+										</Toolbar>
+										<Label text="Department" width="100px" textAlign="Center"/>
+										<Input value="{Url}" maxLength="100"/>
+										<Label text="Position" width="100px" textAlign="Center"/>
+										<Input value="{Twitter}" maxLength="100"/>
+										<Toolbar ariaLabelledBy="Title4">
+											<Title id="Title4" text="Communication Data"/>
+										</Toolbar>
+										<Label text="Work" width="100px" textAlign="Center"/>
+										<Input value="{Url}" maxLength="100"/>
+										<Label text="Mobile" width="100px" textAlign="Center"/>
+										<Input value="{Url}" maxLength="100"/>
+										<Label text="EMail" width="100px" textAlign="Center"/>
+										<Input value="{Url}" maxLength="100"/>
+									</f:content>
+								</f:SimpleForm>
+							</HBox>
+						</HBox>
+					</content>
+					<footer>
+						<Toolbar>
+							<ToolbarSpacer/>
+							<Button text="Submit" icon="sap-icon://paper-plane" type="Emphasized" enabled="true" press="onSave"/>
+							<Button text="Cancel" type="Emphasized" enabled="true" icon="sap-icon://decline" press="onCancel"/>
+							<ToolbarSpacer/>
+						</Toolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
